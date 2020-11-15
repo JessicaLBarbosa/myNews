@@ -1,0 +1,61 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+ion-header {
+  justify-content: center;
+  text-align: center;
+}
+
+ion-title {
+  --color: #ffbe76;
+}
+
+ion-content {
+  justify-content: center;
+  text-align: center;
+}
+
+form {
+  width: 70%;
+  min-width: 250px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ion-item {
+  --color: #ffbe76;
+  padding-top: 20px;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+ion-button {
+  --background: #ffbe76;
+  --color: #30336b;
+  --padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+ion-icon {
+  padding-left: 10px;
+}
+
+ion-chip {
+  width: 50%;
+  min-width: 250px;
+  font-size: 16px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
