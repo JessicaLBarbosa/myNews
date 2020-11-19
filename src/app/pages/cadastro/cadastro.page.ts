@@ -10,6 +10,7 @@ import { AutenticacaoService } from 'src/app/usuario/autenticacao.service';
 })
 export class CadastroPage implements OnInit {
 
+  public login:string = "";
   public email:string = "";
   public password:string = "";
   public message:string = "";
