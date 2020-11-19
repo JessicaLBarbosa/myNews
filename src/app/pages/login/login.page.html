@@ -9,14 +9,14 @@
   <form action="">
     <div class="login-input">
       <ion-item>
-        <ion-input type="text" name="login" placeholder="Login"></ion-input>
+        <ion-input type="text" name="login" placeholder="E-mail" [(ngModel)]="email"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="password" name="password" placeholder="Password"></ion-input>
+        <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="password"></ion-input>
       </ion-item>
     </div>
     <div class="login-btn">
-      <ion-button type="submit">Login <ion-icon name="log-in"></ion-icon></ion-button>
+      <ion-button type="submit" (click)="loginUsuario()">Login <ion-icon name="log-in"></ion-icon></ion-button>
       <ion-router-link href="cadastro">Não tem conta?</ion-router-link>
     </div>  
   </form>

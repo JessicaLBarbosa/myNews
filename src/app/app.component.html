@@ -7,7 +7,7 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-item>
-            <ion-list-header>Inbox</ion-list-header>
+            <ion-list-header>{{Login}}</ion-list-header>
           </ion-item>
           
 
@@ -20,6 +20,11 @@
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
+      <ion-item>
+        <ion-button type="submit"(click)="sairUsuario()"><ion-icon name="log-out-outline"></ion-icon>
+          Sign Out</ion-button>
+        
+      </ion-item>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>

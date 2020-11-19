@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
+import { IonInfiniteScroll } from '@ionic/angular';
 
 @Component({
   selector: 'app-news',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsPage implements OnInit {
 
-  constructor() { }
+  constructor(public loadingController: LoadingController) { }
+
+  async loadingEffect () {
+    const loading = await this.loadingController.create ({
+      message: 'Carregando Informação',
+      duration: 1000,
+      spinner: "lines"
+    });
+    await loading.present();
+    const { role, data } = await loading.onDidDismiss();
+  }
+
+    ionViewDidEnter () {
+      this.loadingEffect();
+    }
 
   ngOnInit() {
   }

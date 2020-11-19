@@ -7,18 +7,15 @@
 <ion-content>
   <form>
     <ion-item>
-      <ion-input type="text" name="login" placeholder="Login"></ion-input>
+      <ion-input type="text" name="login" placeholder="Login" [(ngModel)]="login"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="email" name="email" placeholder="E-mail"></ion-input>
+      <ion-input type="email" name="email" placeholder="E-mail" [(ngModel)]="email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="password" name="password" placeholder="Password"></ion-input>
+      <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="password"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-input type="password" name="passwordConfirm" placeholder="Confirme Password"></ion-input>
-    </ion-item>
-      <ion-button type="submit" expand="block">Cadastrar <ion-icon name="save"></ion-icon></ion-button>
+      <ion-button type="submit" expand="block" (click)="cadastraUsuario">Cadastrar <ion-icon name="save"></ion-icon></ion-button>
   </form>
   <ion-chip color="success">
     <ion-label>© Developer: Jessica L. Barbosa</ion-label>
