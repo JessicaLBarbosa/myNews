@@ -1,26 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Bem-vindo</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <img src="../../../assets/img/logo.png" alt="movieNews">
-  <form action="">
-    <div class="login-input">
-      <ion-item>
-        <ion-input type="text" name="login" placeholder="E-mail" [(ngModel)]="email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="password"></ion-input>
-      </ion-item>
+  <form action="" class="login-form">
+    <h1>Bem-vindo</h1>
+    <div class="txtb">
+      <ion-input type="text" name="login" placeholder="E-mail" [(ngModel)]="email"><span></span></ion-input>
     </div>
-    <div class="login-btn">
-      <ion-button type="submit" (click)="loginUsuario()">Login <ion-icon name="log-in"></ion-icon></ion-button>
-      <ion-router-link href="cadastro">Não tem conta?</ion-router-link>
-    </div>  
+    <div class="txtb">
+      <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="password"><span></span></ion-input>  
+    </div>
+    <input type="submit" class="logbtn" value="Login" (click)="loginUsuario()">
+
+    <div class="bottom-text">
+      Don't have account? <ion-router-link href="cadastro">Sign Up</ion-router-link>
+    </div>
   </form>
-    <ion-chip color="success">
+  <div class="bottom-text">
+    <ion-chip>
       <ion-label>© Developer: Jessica L. Barbosa</ion-label>
     </ion-chip>
+  </div>
 </ion-content>

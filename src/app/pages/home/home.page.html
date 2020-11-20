@@ -3,44 +3,57 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Home</ion-title>
+    <ion-title><ion-icon name="home-sharp"></ion-icon></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <!-- Informações da Aplicação -->
-  <ion-card>
-    <img src="../../../assets/img/news.jpg" alt="myNews" class="img1"/>
-    <ion-card-header>
-      <ion-card-subtitle>version: alpha 0.1v</ion-card-subtitle>
-      <ion-card-title>myNews App</ion-card-title>
-    </ion-card-header>
+  <div class="appInfo">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>App version: alpha 0.1v</ion-card-subtitle>
+        <ion-card-title>myNews App</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        myNews é uma aplicação desenvolvida para avaliação do módulo de Desenvolvimento Móvel da Graduação de Ciência da Computação.
+        Seu objetivo é fazer o aluno entender o funcionamento de rotas, utilização de APIs e aplicação de Geolocalização, junto com o desenvolvimento de uma aplicação móvel funcional.
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="devInfo">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Jessica Lessa Barbosa</ion-card-title>
+        <ion-card-subtitle>Mat: 18100421</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <div class="info-section">
+          <h2>About <div class="border"></div></h2>
+          <p>Atualmente cursando o 6º período do Curso de Ciência da Computação na UNISUAM</p>
+          <h2>Contact <div class="border"></div></h2>
+          <div class="s-m">
+            <ion-router-link href="https://web.facebook.com/jessica.lessabarbosa"><ion-icon name="logo-facebook"></ion-icon></ion-router-link>
+            <ion-router-link href="https://twitter.com/jesselbarbosa"><ion-icon name="logo-twitter"></ion-icon></ion-router-link>
+            <ion-router-link href="https://www.linkedin.com/in/jessica-lessa-barbosa/"><ion-icon name="logo-linkedin"></ion-icon></ion-router-link>
+            <ion-router-link href="https://github.com/JessicaLBarbosa"><ion-icon name="logo-github"></ion-icon></ion-router-link>
+          </div>
+          
+        </div>
+        
+      </ion-card-content>
+    </ion-card>
+  </div>
   
-    <ion-card-content>
-      myNews é um app de notícias com base na API do google news.
-      Criado para a avaliação da matéria de Desenvolvimento Móvel.
-    </ion-card-content>
-  </ion-card>
-  <!-- Informações do Desenvolver -->
-  <ion-card>
-    <img src="../../../assets/img/me.jpg" alt="Jessica L Barbosa" class="img2">
-    <ion-card-header>
-      <ion-card-subtitle>Graduação em Ciência da Computação</ion-card-subtitle>
-      <ion-card-title>Developer: Jessica Lessa Barbosa</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <p>Nome: Jessica Lessa Barbosa</p>
-      <p>Curso: Ciência da Computação</p>
-      <p>Matrícula: 18100421</p>
-      <p>Semestre: 6º Semestre</p>
-    </ion-card-content>
-      <ion-item>
+  <!-- Informações do Desenvolver
         <ion-router-link href="https://web.facebook.com/jessica.lessabarbosa"><ion-icon name="logo-facebook"></ion-icon></ion-router-link>
         <ion-router-link href="https://twitter.com/jesselbarbosa"><ion-icon name="logo-twitter"></ion-icon></ion-router-link>
         <ion-router-link href="https://www.linkedin.com/in/jessica-lessa-barbosa/"><ion-icon name="logo-linkedin"></ion-icon></ion-router-link>
         <ion-router-link href="https://github.com/JessicaLBarbosa"><ion-icon name="logo-github"></ion-icon></ion-router-link>
       </ion-item>
-    
   </ion-card>
+   -->
 </ion-content>

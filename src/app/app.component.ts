@@ -14,18 +14,18 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'Home',
-      url: '/pages/home',
+      url: '/home',
       icon: 'home'
     },
     {
       title: 'News',
-      url: '/pages/news',
+      url: '/news',
       icon: 'newspaper'
     },
     {
       title: 'Map',
-      url: '/pages/map',
-      icon: 'location'
+      url: '/map',
+      icon: 'compass'
     },
   ];
 

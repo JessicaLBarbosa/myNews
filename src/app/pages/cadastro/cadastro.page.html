@@ -1,25 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Crie sua conta</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <form>
-    <ion-item>
-      <ion-input type="text" name="login" placeholder="Login" [(ngModel)]="login"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="email" name="email" placeholder="E-mail" [(ngModel)]="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="password"></ion-input>
-    </ion-item>
-    <ion-button type="submit" (click)="cadastraUsuario()" expand="block">
-      Cadastrar <ion-icon name="save"></ion-icon>
-    </ion-button>
+  <form action="" class="signUp-form">
+    <h1>Sign Up Now</h1>
+    <div class="txtb">
+      <ion-input type="text" name="login" placeholder="E-mail" [(ngModel)]="email"><span></span></ion-input>
+    </div>
+    <div class="txtb">
+      <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="password"><span></span></ion-input>  
+    </div>
+    <input type="submit" class="signUpbtn" value="Sign-Up" (click)="cadastraUsuario()">
   </form>
-  <ion-chip color="success">
-    <ion-label>© Developer: Jessica L. Barbosa</ion-label>
-  </ion-chip>
+  <div class="bottom-text">
+    <ion-chip>
+      <ion-label>© Developer: Jessica L. Barbosa</ion-label>
+    </ion-chip>
+  </div>
 </ion-content>
