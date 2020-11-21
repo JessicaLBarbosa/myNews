@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { IonInfiniteScroll } from '@ionic/angular';
 import { NewsService } from 'src/app/googlenews/news.service';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { AutenticacaoService } from 'src/app/usuario/autenticacao.service';
 
 @Component({
   selector: 'app-news',
@@ -16,11 +17,15 @@ export class NewsPage implements OnInit {
   public page = 1;
   public maxPage:number;
   public resultsPerPage = 20;
-  public user:string;
   public country:string = "us";
   public category:string = "science";
 
-  constructor(public loadingController: LoadingController, public newsService:NewsService, private activatedRoute:ActivatedRoute) { }
+  constructor(
+    public loadingController: LoadingController, 
+    public newsService:NewsService, 
+    public autenticacaoService: AutenticacaoService,
+    public router: Router,
+  ) { }
 
   async loadingEffect () {
     const loading = await this.loadingController.create ({
@@ -45,7 +50,7 @@ export class NewsPage implements OnInit {
   }
 
   loadPage() {
-    this.newsService.getTopHeadlines(this.country, this.category, this.page, this.resultsPerPage).subscribe(
+    this.newsService.getTopHeadlines(this.country).subscribe(
       data => {
         const response = (data as any);
         this.newsList = this.newsList.concat(response.articles);
@@ -66,7 +71,11 @@ export class NewsPage implements OnInit {
   }
 
   ngOnInit() {
-    this.user = this.activatedRoute.snapshot.paramMap.get('user');
   }
 
+  logoutUsuario() {
+    this.autenticacaoService.logoutNoFireBase()
+    this.router.navigate(['login']);
+
+  }
 }

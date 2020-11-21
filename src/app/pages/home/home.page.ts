@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
+import { AutenticacaoService } from 'src/app/usuario/autenticacao.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -7,7 +10,12 @@ import { LoadingController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
-  constructor(public loadingController: LoadingController) { }
+  constructor(
+    public loadingController: LoadingController,
+    public autenticacaoService: AutenticacaoService,
+    public router: Router,
+  ) { }
+
 
   async loadingEffect () {
     const loading = await this.loadingController.create ({
@@ -26,4 +34,8 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
+  logoutUsuario() {
+    this.autenticacaoService.logoutNoFireBase()
+    this.router.navigate(['login']);
+  }
 }

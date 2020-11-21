@@ -16,8 +16,8 @@ export class AutenticacaoService {
     return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
   }
 
-  getUserLogged() {
-    return this.ngFireAuth.currentUser;
+  logoutNoFireBase() {
+    return this.ngFireAuth.signOut;
   }
 
 }

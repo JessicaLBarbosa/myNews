@@ -11,8 +11,8 @@ export class NewsService {
 
   constructor(public http:HttpClient) { 
   }
-  public getTopHeadlines (country="us", category="science", page = 1, resultsPerPage=20 ) {
-    let news = `${this.caminhoPadrao}/top-headlines?country=${country}&category=${category}&pageSize=${resultsPerPage}&page=${page}&apiKey=${this.key}`;
+  public getTopHeadlines (country="us") {
+    let news = '${this.caminhoPadrao}/top-headlines?country=${country}&apiKey=${this.key}';
     return this.http.get(news);
   }
 }

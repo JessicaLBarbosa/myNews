@@ -4,6 +4,10 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { Router } from '@angular/router';
+import { AutenticacaoService } from 'src/app/usuario/autenticacao.service';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -33,7 +37,9 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    public autenticacaoService: AutenticacaoService,
+    public router: Router,
   ) {
     this.initializeApp();
   }
@@ -50,5 +56,10 @@ export class AppComponent implements OnInit {
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+  }
+
+  logoutUsuario() {
+    this.autenticacaoService.logoutNoFireBase()
+    this.router.navigate(['login']);
   }
 }
