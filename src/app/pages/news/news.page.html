@@ -9,24 +9,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card *ngFor = "let news of newslist">
-    <ion-img src={{news.urlToImage}}></ion-img> 
+<ion-content>
+  <ion-card *ngFor="let new of newsList">
+    <ion-img [src]="{{new.urlToImage}}"></ion-img>
     <ion-card-header>
-      <ion-card-subtitle>{{news.publishedAt}}</ion-card-subtitle>
-      <ion-card-title>{{news.title}}</ion-card-title>
+      <ion-card-subtitle> {{new.publishedAt}} </ion-card-subtitle>
+      <ion-card-title> {{new.title}} </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      {{news.description}}
+      {{new.content}}
     </ion-card-content>
   </ion-card>
-
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="efeitoScrollInfinito($event)">
-    <ion-infinite-scroll-content
-      loadingSpinner="circular"
-      loadingText="Carregando mais notícias...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="logoutUsuario()">
