@@ -15,4 +15,9 @@ export class AutenticacaoService {
   cadastraNoFirebase(email, password) {
     return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
   }
+
+  getUserLogged() {
+    return this.ngFireAuth.currentUser;
+  }
+
 }

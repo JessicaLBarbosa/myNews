@@ -16,13 +16,11 @@
     text-align: center;
     padding-right: 10px;
   }
-  ion-button {
-    --border-radius: 50%;
-    --background: #636e72;
-    margin-right: 10px;
-  }
+}
+
+ion-fab-button {
+  --background: #636e72;
   ion-icon {
-    text-align: right;
-    font-size: 20px;
+    font-size: 30px;
   }
 }

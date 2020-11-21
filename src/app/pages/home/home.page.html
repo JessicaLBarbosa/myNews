@@ -5,9 +5,6 @@
     </ion-buttons>
     <div class="bar">
       <ion-title>Home</ion-title>
-      <ion-button>
-        <ion-icon name="log-out-outline"></ion-icon>
-      </ion-button>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -53,12 +50,9 @@
     </ion-card>
   </div>
   
-  <!-- Informações do Desenvolver
-        <ion-router-link href="https://web.facebook.com/jessica.lessabarbosa"><ion-icon name="logo-facebook"></ion-icon></ion-router-link>
-        <ion-router-link href="https://twitter.com/jesselbarbosa"><ion-icon name="logo-twitter"></ion-icon></ion-router-link>
-        <ion-router-link href="https://www.linkedin.com/in/jessica-lessa-barbosa/"><ion-icon name="logo-linkedin"></ion-icon></ion-router-link>
-        <ion-router-link href="https://github.com/JessicaLBarbosa"><ion-icon name="logo-github"></ion-icon></ion-router-link>
-      </ion-item>
-  </ion-card>
-   -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="this.router.navigate([login]);">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
