@@ -11,15 +11,20 @@
 
 <ion-content>
   <!-- Informações das Notícias -->
+  <ion-refresher slot="fixed" (ionRefresh)="refreshEffect($event)" >
+  <ion-refresher-content refreshingSpinner="lines"
+  refreshingText="Refreshing..."></ion-refresher-content>
+  </ion-refresher>
   <div class="newsInfo">
-    <ion-card>
+    <ion-card *ngFor="let new of lista_news">
+      <img src={{new.urlToImage}} alt="">
       <ion-card-header>
-        <ion-card-subtitle>teste</ion-card-subtitle>
-        <ion-card-title>teste alpha 1</ion-card-title>
+        <ion-card-subtitle>{{new.publishedAt}}</ion-card-subtitle>
+        <ion-card-title>{{new.title}}</ion-card-title>
       </ion-card-header>
     
       <ion-card-content>
-        teste de api
+        {{new.description}}
       </ion-card-content>
     </ion-card>
   </div>
