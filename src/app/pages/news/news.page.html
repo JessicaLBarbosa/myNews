@@ -10,17 +10,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let new of newsList">
-    <ion-img [src]="{{new.urlToImage}}"></ion-img>
-    <ion-card-header>
-      <ion-card-subtitle> {{new.publishedAt}} </ion-card-subtitle>
-      <ion-card-title> {{new.title}} </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      {{new.content}}
-    </ion-card-content>
-  </ion-card>
-
+  <!-- Informações das Notícias -->
+  <div class="newsInfo">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>teste</ion-card-subtitle>
+        <ion-card-title>teste alpha 1</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        teste de api
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="logoutUsuario()">
       <ion-icon name="log-out-outline"></ion-icon>

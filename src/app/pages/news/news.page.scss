@@ -18,6 +18,25 @@
   }
 }
 
+.newsInfo {
+  text-align: justify;
+  padding: 10px;
+  ion-card-header,
+  ion-card-content {
+    background: #374042;
+    padding: 10px;
+  }
+  ion-card {
+    box-shadow: 0 0 10px #636e72;
+  }
+  ion-card-title {
+    font-size: 30px;
+  }
+  ion-card-subtitle {
+    font-size: 24px;
+  }
+}
+
 ion-fab-button {
   --background: #636e72;
   ion-icon {
