@@ -11,8 +11,8 @@ export class NewsService {
 
   constructor(public http:HttpClient) { 
   }
-  public getTopHeadlines (country="us") {
-    let news = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=4976c948061a491fbb8dd1a2dcf885c0";
+  public getTopHeadlines (country="us", page=1) {
+    let news = "https://newsapi.org/v2/top-headlines?country=us&page=1&category=technology&apiKey=4976c948061a491fbb8dd1a2dcf885c0";
     return this.http.get(news);
   }
 }

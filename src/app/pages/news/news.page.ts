@@ -5,6 +5,7 @@ import { NewsService } from 'src/app/googlenews/news.service';
 import { AutenticacaoService } from 'src/app/usuario/autenticacao.service';
 
 import { LoadingController } from '@ionic/angular';
+import { IonInfiniteScroll } from '@ionic/angular';
 @Component({
   selector: 'app-news',
   templateUrl: './news.page.html',
@@ -24,7 +25,7 @@ export class NewsPage implements OnInit {
   public page:number = 1;
 
   loadPage () {
-    this.newsService.getTopHeadlines('us').subscribe (
+    this.newsService.getTopHeadlines('us', this.page).subscribe (
       data => {
         const response = (data as any);
         if (this.page == 1){
@@ -61,6 +62,13 @@ export class NewsPage implements OnInit {
     }, 500);
   }
 
+  infScrollEffect(event) {
+    this.page++;
+    this.loadPage();
+    setTimeout(() => {
+      event.target.complete();
+    }, 1000)
+  }
 
   ionViewDidEnter () {
     this.loadingEffect();
