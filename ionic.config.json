@@ -1,7 +1,12 @@
 {
   "name": "myNews",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {
+      "enabled": true
+    }
   },
   "type": "angular"
 }
