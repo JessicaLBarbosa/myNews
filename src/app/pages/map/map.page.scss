@@ -18,6 +18,14 @@
   }
 }
 
+ion-button {
+  --background: #25ccf7;
+  --color: #2d3436;
+  ion-icon {
+    margin-right: 5px;
+  }
+}
+
 ion-fab-button {
   --background: #636e72;
   ion-icon {
