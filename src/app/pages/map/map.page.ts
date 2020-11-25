@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import { AutenticacaoService } from 'src/app/usuario/autenticacao.service';
+import {Map, tileLayer, marker} from 'leaflet';
 
 @Component({
   selector: 'app-map',
@@ -9,6 +10,7 @@ import { AutenticacaoService } from 'src/app/usuario/autenticacao.service';
   styleUrls: ['./map.page.scss'],
 })
 export class MapPage implements OnInit {
+
 
   constructor(
     public loadingController: LoadingController,
@@ -28,6 +30,7 @@ export class MapPage implements OnInit {
     await loading.present();
     const { role, data } = await loading.onDidDismiss();
   }
+
 
     ionViewDidEnter () {
       this.loadingEffect();
