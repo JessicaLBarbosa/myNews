@@ -4,7 +4,9 @@ import { LoadingController } from '@ionic/angular';
 import { AutenticacaoService } from 'src/app/usuario/autenticacao.service';
 
 import { Map, tileLayer, marker } from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 
 @Component({
   selector: 'app-map',
@@ -50,7 +52,7 @@ export class MapPage implements OnInit {
     loadMap() {
       this.map = new Map("mapId").setView([-22.841651385404635, -43.26450568676988], 13);
 
-      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
+      tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
     }
 
     pegarLocalizacao() {

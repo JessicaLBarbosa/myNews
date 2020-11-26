@@ -18,11 +18,21 @@
   }
 }
 
-ion-button {
-  --background: #25ccf7;
-  --color: #2d3436;
-  ion-icon {
-    margin-right: 5px;
+.map-container {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+
+  ion-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    --background: #25ccf7;
+    --color: #2d3436;
+    ion-icon {
+      margin-right: 5px;
+    }
   }
 }
 
