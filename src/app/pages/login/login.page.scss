@@ -75,6 +75,11 @@ body {
   margin-top: 60px;
   text-align: center;
   font-size: 16px;
+  ion-router-link {
+    text-transform: uppercase;
+    color: #a29bfe;
+    font-weight: bold;
+  }
 }
 
 ion-chip {
