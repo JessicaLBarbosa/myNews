@@ -50,15 +50,15 @@ export class MapPage implements OnInit {
     }
 
     loadMap() {
-      this.map = new Map("mapId").setView([-22.841651385404635, -43.26450568676988], 13);
+      this.map = new Map("mapId").setView([-22.8418837,-43.2667373], 15);
 
-      tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
+      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
     }
 
     pegarLocalizacao() {
       this.geoLocation.getCurrentPosition().then(
         (resp) => {
-          this.map.setView([resp.coords.latitude, resp.coords.longitude], 15);
+          this.map.setView([resp.coords.latitude, resp.coords.longitude], 17);
           this.newMarker = marker([resp.coords.latitude, resp.coords.longitude], { draggable: false }).addTo(this.map);
           this.newMarker.bindPopup("You're Here!").openPopup();
   
