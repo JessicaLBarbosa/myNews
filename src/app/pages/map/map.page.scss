@@ -18,6 +18,27 @@
   }
 }
 
+.map-container {
+  width: 100vw;
+  height: 100vh;
+
+  #mapId {
+    height: 85%;
+  }
+
+  ion-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    --background: #25ccf7;
+    --color: #2d3436;
+    ion-icon {
+      margin-right: 5px;
+    }
+  }
+}
+
 ion-fab-button {
   --background: #636e72;
   ion-icon {
