@@ -10,7 +10,17 @@
 </ion-header>
 
 <ion-content>
-<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <div class="map-container">
+    <div id="mapId">
+    </div>
+
+    <ion-button expand="full" (click)="pegarLocalizacao()">
+      <ion-icon name="location"></ion-icon> My Place
+    </ion-button>
+  </div>
+  
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="logoutUsuario()">
       <ion-icon name="log-out-outline"></ion-icon>
     </ion-fab-button>
