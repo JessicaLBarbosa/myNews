@@ -12,9 +12,11 @@
 <ion-content>
   <!-- Informações das Notícias -->
   <ion-refresher slot="fixed" (ionRefresh)="refreshEffect($event)" >
-  <ion-refresher-content refreshingSpinner="lines"
-  refreshingText="Refreshing..."></ion-refresher-content>
+    <ion-refresher-content refreshingSpinner="lines"
+    refreshingText="Refreshing...">
+    </ion-refresher-content>
   </ion-refresher>
+
   <div class="newsInfo">
     <ion-card *ngFor="let new of lista_news">
       <img src={{new.urlToImage}} alt="">
@@ -22,7 +24,6 @@
         <ion-card-subtitle>{{new.publishedAt}}</ion-card-subtitle>
         <ion-card-title>{{new.title}}</ion-card-title>
       </ion-card-header>
-    
       <ion-card-content>
         {{new.description}}
       </ion-card-content>

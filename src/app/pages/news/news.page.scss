@@ -21,7 +21,6 @@
 .newsInfo {
   text-align: justify;
   padding: 10px;
-  box-shadow: 0 0 10px #636e72;
   ion-card-header,
   ion-card-content {
     background: #374042;
@@ -29,6 +28,8 @@
   }
   ion-card {
     box-shadow: 0 0 10px #636e72;
+    padding-bottom: 10px;
+    --background: #535c5f;
   }
   ion-card-title {
     font-size: 20px;
