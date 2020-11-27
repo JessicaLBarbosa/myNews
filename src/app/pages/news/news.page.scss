@@ -13,15 +13,15 @@
   ion-title {
     font-size: 30px;
     text-transform: uppercase;
-    text-align: center;
-    padding-right: 10px;
+    text-align: left;
+    padding-left: 10px;
+    color: #a29bfe;
   }
 }
 
 .newsInfo {
   text-align: justify;
   padding: 10px;
-  box-shadow: 0 0 10px #636e72;
   ion-card-header,
   ion-card-content {
     background: #374042;
@@ -29,6 +29,7 @@
   }
   ion-card {
     box-shadow: 0 0 10px #636e72;
+    margin-bottom: 10px;
   }
   ion-card-title {
     font-size: 20px;

@@ -1,8 +1,11 @@
 <ion-content>
   <form action="" class="signUp-form">
     <h1>Sign Up Now</h1>
+    <!--<div class="txtb">
+      <ion-input type="text" name="login" placeholder="Username" [(ngModel)]="login"><span></span></ion-input>
+    </div>-->
     <div class="txtb">
-      <ion-input type="text" name="login" placeholder="E-mail" [(ngModel)]="email"><span></span></ion-input>
+      <ion-input type="text" name="email" placeholder="E-mail" [(ngModel)]="email"><span></span></ion-input>
     </div>
     <div class="txtb">
       <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="password"><span></span></ion-input>  
@@ -11,7 +14,7 @@
   </form>
   <div class="bottom-text">
     <ion-chip>
-      <ion-label>© Developer: Jessica L. Barbosa</ion-label>
+      <ion-label> <span>© Developer:</span>  Jessica L. Barbosa</ion-label>
     </ion-chip>
   </div>
 </ion-content>
