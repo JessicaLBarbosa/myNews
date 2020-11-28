@@ -36,4 +36,9 @@ export class LoginPage implements OnInit {
     });
     toast.present();
   }
+
+  showPassword() {
+    document.getElementsById("password").setAttribute("type", "text");
+  }
+
 }

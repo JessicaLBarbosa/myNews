@@ -13,6 +13,7 @@ export class CadastroPage implements OnInit {
   public login:string = "";
   public email:string = "";
   public password:string = "";
+  public confirmPassword:string = "";
   public message:string = "";
 
   constructor(public autenticacaoService: AutenticacaoService, public router: Router, public toastController: ToastController) { }
@@ -21,13 +22,20 @@ export class CadastroPage implements OnInit {
   }
 
   cadastraUsuario() {
-    this.autenticacaoService.cadastraNoFirebase(this.email, this.password)
-    .then((res) => {
-      this.router.navigate(['home']);
-    }).catch ((error) => {
-      this.message = "Erro ao cadastrar usuário.";
+    if (this.confirmPassword == this.password) {
+      this.autenticacaoService.cadastraNoFirebase(this.email, this.password)
+      .then((res) => {
+        this.router.navigate(['home']);
+      }).catch ((error) => {
+        this.message = "Erro ao cadastrar usuário.";
+        this.exibeMensagem();
+      })
+    } else {
+      this.message = "Senhas não são iguais.";
       this.exibeMensagem();
-    })
+    }
+
+    
   }
 
   async exibeMensagem() {

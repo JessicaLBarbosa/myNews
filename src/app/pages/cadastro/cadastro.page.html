@@ -5,12 +5,18 @@
       <ion-input type="text" name="login" placeholder="Username" [(ngModel)]="login"><span></span></ion-input>
     </div>-->
     <div class="txtb">
-      <ion-input type="text" name="email" placeholder="E-mail" [(ngModel)]="email"><span></span></ion-input>
+      <ion-input type="email" name="email" placeholder="E-mail" [(ngModel)]="email"><span></span></ion-input>
     </div>
     <div class="txtb">
       <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="password"><span></span></ion-input>  
     </div>
+    <div class="txtb">
+      <ion-input type="password" name="confirmPassword" placeholder="Confirm Password" [(ngModel)]="confirmPassword"><span></span></ion-input>  
+    </div>
     <input type="submit" class="signUpbtn" value="Sign-Up" (click)="cadastraUsuario()">
+    <div class="bottom-text">
+      Already have account? <ion-router-link href="login">Login</ion-router-link>
+    </div>
   </form>
   <div class="bottom-text">
     <ion-chip>
