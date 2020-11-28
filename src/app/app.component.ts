@@ -59,7 +59,7 @@ export class AppComponent implements OnInit {
   }
 
   logoutUsuario() {
-    this.autenticacaoService.logoutNoFireBase()
-    this.router.navigate(['login']);
+    this.autenticacaoService.logoutNoFireBase();
+    this.router.navigate(['welcome']);
   }
 }
