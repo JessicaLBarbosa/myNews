@@ -38,7 +38,7 @@ export class LoginPage implements OnInit {
   }
 
   showPassword() {
-    document.getElementsById("password").setAttribute("type", "text");
+    //document.getElementsById("password").setAttribute("type", "text");
   }
 
 }

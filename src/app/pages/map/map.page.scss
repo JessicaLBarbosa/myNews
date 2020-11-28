@@ -17,32 +17,38 @@
     padding-left: 10px;
     color: #a29bfe;
   }
+  ion-button {
+    font-size: 30px;
+  }
 }
 
-.map-container {
-  width: 100vw;
-  height: 100vh;
+ion-card {
+  box-shadow: 0 0 10px #636e72;
+  margin-bottom: 10px;
+}
 
-  #mapId {
-    height: 85%;
-  }
+.map {
+  height: 90%;
+  .map-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
 
-  ion-button {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    --background: #25ccf7;
-    --color: #2d3436;
-    ion-icon {
-      margin-right: 5px;
+    #mapId {
+      height: 100%;
     }
   }
 }
 
-ion-fab-button {
-  --background: #636e72;
-  ion-icon {
-    font-size: 30px;
+.getLocation {
+  padding: 10px 0;
+  ion-button {
+    bottom: 10px;
+    --background: #25ccf7;
+    --color: #2d3436;
+    ion-icon {
+      margin-right: 5px;
+      font-size: 20px;
+    }
   }
 }

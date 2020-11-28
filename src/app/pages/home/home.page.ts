@@ -34,8 +34,8 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
-  logoutUsuario() {
-    this.autenticacaoService.logoutNoFireBase()
-    this.router.navigate(['login']);
+  sairApp() {
+    this.autenticacaoService.logoutNoFireBase();
+    navigator['app'].exitApp();
   }
 }

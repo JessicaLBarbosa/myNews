@@ -5,23 +5,27 @@
     </ion-buttons>
     <div class="bar">
       <ion-title>Map</ion-title>
+      <ion-button fill="clear" shape="round"  slots="icon-only" (click)="sairApp()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
     </div>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="map-container">
-    <div id="mapId">
-    </div>
+  <ion-card class="map">
+    <ion-card-content>
+      <div class="map-container">
+        <div id="mapId">
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="getLocation">
     <ion-button expand="full" (click)="pegarLocalizacao()">
-      <ion-icon name="location"></ion-icon> My Place
+      <ion-icon name="locate-outline"></ion-icon> My Place
     </ion-button>
   </div>
-  
-
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="logoutUsuario()">
-      <ion-icon name="log-out-outline"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>

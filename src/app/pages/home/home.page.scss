@@ -17,6 +17,9 @@
     padding-left: 10px;
     color: #a29bfe;
   }
+  ion-button {
+    font-size: 30px;
+  }
 }
 .appInfo,
 .devInfo {
@@ -71,11 +74,4 @@ ion-router-link {
   font-size: 34px;
   padding-right: 20px;
   transition: 0.4s;
-}
-
-ion-fab-button {
-  --background: #636e72;
-  ion-icon {
-    font-size: 30px;
-  }
 }

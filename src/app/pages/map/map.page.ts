@@ -43,10 +43,9 @@ export class MapPage implements OnInit {
       this.loadMap();
     }
 
-    logoutUsuario() {
-      this.autenticacaoService.logoutNoFireBase()
-      this.router.navigate(['login']);
-  
+    sairApp() {
+      this.autenticacaoService.logoutNoFireBase();
+      navigator['app'].exitApp();
     }
 
     loadMap() {
