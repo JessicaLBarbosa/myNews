@@ -10,15 +10,15 @@
 .bar {
   box-sizing: border-box;
   display: flex;
+  text-align: center;
   ion-title {
     font-size: 30px;
     text-transform: uppercase;
-    text-align: left;
-    padding-left: 10px;
     color: #a29bfe;
   }
   ion-button {
     font-size: 30px;
+    padding-left: 180px;
   }
 }
 
